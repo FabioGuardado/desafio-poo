@@ -8,7 +8,7 @@ public class MysqlConnection {
 
     public MysqlConnection() {
         try {
-            connection = DriverManager.getConnection(url, "root", "Database$1");
+            connection = DriverManager.getConnection(url, "root", "");
         } catch (SQLException e) {
             System.out.println(e);
         }
