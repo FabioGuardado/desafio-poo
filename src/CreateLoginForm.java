@@ -76,6 +76,7 @@ public class CreateLoginForm extends JFrame implements ActionListener {
             st.setString(2, passValue);
             ResultSet rs = st.executeQuery();
             if (rs.next()) {
+                Globals.setUserRole(rs.getInt("rol_id"));
                 CreateMenu menu = new CreateMenu();
                 menu.setVisible(true);
                 this.dispose();
